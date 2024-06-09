@@ -1,12 +1,12 @@
 <header>
-    <div class="h-24 bg-yellow-100">
+    <div class="h-28">
       <%= link_to "/", class: "float-left" do %>
         <%= image_tag 'gameaward-logo.png', width: '130', height:'90' %>
       <% end %>
-      <ul class="float-right mt-5 mx-4">
+      <ul class="float-right m-6">
         <button class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition" onclick="location.href='#'">
             推しゲーム大賞とは？</button>
-        <%= link_to '#' do %>
+        <%= link_to new_user_session_path do %>
           <button class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition ml-3">
             ログイン</button>
         <% end %>

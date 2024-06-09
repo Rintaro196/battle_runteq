@@ -1,6 +1,6 @@
 <header>
     <div class="h-24">
-      <%= link_to "/", class: "top-logo" do %>
+      <%= link_to "/", class: "float-left" do %>
       <%= image_tag 'gameaward-logo.png', width: '130', height:'90' %>
       <% end %>
       <ul class="float-right mt-5 mx-4">
@@ -8,8 +8,9 @@
             推しゲーム大賞とは？</button>
         <button class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition ml-3" onclick="location.href='#'">
             受賞作品作成</button>
-        <%= link_to "#" do %>
-          <button class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition ml-3">ログアウト</button>
+        <%= link_to destroy_user_session_path, data: { turbo_method: :delete } do %>
+          <button class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition ml-3">
+            ログアウト</button>
         <% end %>
       </ul>
     </div>
