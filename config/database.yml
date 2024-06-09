@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: myapp_production
-  username: myapp
-  password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
+  database: gameaward_production
+  username: mana
+  password: postgres://mana:7VPV2GiR1pAOjMBkvIf1UhsyD5jHksvv@dpg-cpim7la1hbls73bjanug-a/gameaward_production_fl5q
