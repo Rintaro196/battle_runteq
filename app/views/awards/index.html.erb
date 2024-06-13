@@ -1,0 +1,12 @@
+<head>
+    <title><%= content_for(:title, "受賞作品一覧") %></title>
+</head>
+<body>
+    <div>
+      <% if @awards.present? %>
+        <%= render @awards %>
+      <% else %>
+        <p>受賞作品はありません</p>
+      <% end %>
+    </div>
+</body>
