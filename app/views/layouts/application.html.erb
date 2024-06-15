@@ -12,12 +12,12 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <%= render "layouts/logged_header" %>
-    <% else %>
-      <%= render "layouts/header" %>
-    <% end %>
-    <%= yield %>
+      <% if user_signed_in? %>
+        <%= render "layouts/logged_header" %>
+      <% else %>
+        <%= render "layouts/header" %>
+      <% end %>
+      <%= yield %>
     <%= render "layouts/footer" %>
   </body>
 </html>
