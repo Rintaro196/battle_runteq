@@ -7,11 +7,11 @@
       <%= form_with(model: @award) do |f| %>
         <div class="field mt-3">
           <%= f.label :award_name, "受賞名 （例：一番遊んだで賞）" %><br />
-          <%= f.text_field :award_name, autofocus: true, class: " input input-bordered input-warning w-96" %>
+          <%= f.text_field :award_name, autofocus: true, class: "input input-bordered input-warning w-96" %>
         </div>
         <div class="field mt-3">
           <%= f.label :title, "ゲームタイトル" %><br />
-          <%= f.text_field :title, class: " input input-bordered input-warning w-96" %>
+          <%= f.text_field :title, class: "input input-bordered input-warning w-96" %>
         </div>
         <div class="mt-3">
           <%= f.label :body, "本文（好きに書いてね！）" %><br />
