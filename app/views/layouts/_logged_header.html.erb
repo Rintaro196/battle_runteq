@@ -1,8 +1,16 @@
 <header>
-    <div class="h-24">
+    <div class="h-24 bg-base-300">
       <%= link_to "/", class: "float-left ml-6" do %>
       <%= image_tag 'gameaward-logo.png', width: '130', height:'90' %>
       <% end %>
+      <div class="dropdown dropdown-bottom dropdown-end float-right mt-5 mx-4">
+        <div tabindex="0" role="button" class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition">メニュー</div>
+        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+          <li><%= link_to "推しゲーム大賞とは？", "#" %></li>
+          <li><%= link_to "受賞作品一覧", awards_path %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %></li>
+        </ul>
+      </div>
       <ul class="float-right mt-5 mx-4">
         <button class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition" onclick="location.href='#'">
             推しゲーム大賞とは？</button>

@@ -3,6 +3,7 @@
 </head>
 <body>
     <div>
+      <h2 class="text-4xl text-center py-4">受賞作品一覧</h2>
       <% if @awards.present? %>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-10 mx-auto">
@@ -12,7 +13,7 @@
         </div>
       </section>
       <% else %>
-        <p>受賞作品はありません</p>
+        <p class="text-center text-2xl">受賞作品はありません</p>
       <% end %>
     </div>
 </body>
