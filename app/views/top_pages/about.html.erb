@@ -1,0 +1,19 @@
+<head>
+  <title><%= content_for(:title, "推しゲーム大賞とは？") %></title>
+</head>
+<body?>
+  <div class="text-center my-10">
+    <h2 class="text-5xl my-3 text-yellow-500">推しゲーム大賞とは？</h2>
+    <div class="text-3xl">
+      <p>自分の好きなゲームを共有するアプリです。</p>
+      <p>あなたの"推しゲーム"を受賞させて投稿しまショウ！！</p>
+    </div>
+    <h3 class="text-5xl mt-10 mb-3 text-yellow-500">どんな機能があるの？</h3>
+    <p class="text-3xl">現在は文字の投稿だけできるよ！！<br />画像の投稿はまだできないよ！ゴメンね！！</p>
+    <% if user_signed_in? %>
+      <%= render "logged_links" %>
+    <% else %>
+      <%= render "links" %>
+    <% end %>      
+  </div>
+</body>
