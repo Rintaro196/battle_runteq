@@ -1,4 +1,8 @@
-<div class="text-center my-10">
+<head>
+  <title><%= content_for(:title, "推しゲーム大賞とは？") %></title>
+</head>
+<body?>
+  <div class="text-center my-10">
     <h2 class="text-5xl my-3 text-yellow-500">推しゲーム大賞とは？</h2>
     <div class="text-3xl">
       <p>自分の好きなゲームを共有するアプリです。</p>
@@ -11,4 +15,5 @@
     <% else %>
       <%= render "links" %>
     <% end %>      
-</div>
+  </div>
+</body>
