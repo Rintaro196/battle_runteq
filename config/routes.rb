@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get "/about" => "top_pages#about"
   root "top_pages#top"
 
   resources :awards, only: %i[index show new create]
