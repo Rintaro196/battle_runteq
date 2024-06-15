@@ -1,3 +1,12 @@
-<h4><%= award.award_name %></h4>
-<h5><%= award.title %></h5>
-<p><%= award.body %></p>
+
+<div class="lg:w-1/4 md:w-1/2 p-4 w-full text-center">
+  <p class="text-xs title-font font-medium text-gray-400">受賞名</p>
+  <h2 class="text-2xl text-yellow-500"><%= award.award_name %></h2>
+  <a class="block relative h-48 rounded overflow-hidden">
+    <%= image_tag 'sample.png', class: "object-cover object-center w-full h-full block" %>
+  </a>
+  <p class="text-xs title-font font-medium text-gray-400">ゲームタイトル</p>
+  <p class="text-2xl text-yellow-500"><%= award.title %></p>
+  <p><%= award.body %></p>
+  <p class="text-xs title-font font-medium text-gray-400">授賞者：<%= award.user.name %></p>
+</div>

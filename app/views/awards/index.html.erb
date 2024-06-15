@@ -4,7 +4,13 @@
 <body>
     <div>
       <% if @awards.present? %>
-        <%= render @awards %>
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-10 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <%= render @awards %>
+          </div>
+        </div>
+      </section>
       <% else %>
         <p>受賞作品はありません</p>
       <% end %>
