@@ -7,12 +7,11 @@
     <div class="text-center">
         <h1 class="text-7xl">MY FAVORITE<br />GAME AWARD</h1>
         <h3 class="text-3xl">推しゲーム大賞</h3>
-        <%= link_to awards_path do %>
-          <button class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition">
-            受賞作品を見に行く</button>
-        <% end %>
-        <button class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition ml-3" onclick="location.href='users/sign_up'">
-          授賞者になる(新規登録)</button>     
+        <% if user_signed_in? %>
+          <%= render "logged_links" %>
+        <% else %>
+          <%= render "links" %>
+        <% end %>   
     </div>
   </div>   
 </body>
