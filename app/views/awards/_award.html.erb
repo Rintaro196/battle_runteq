@@ -9,7 +9,7 @@
   <p class="text-2xl text-yellow-500"><%= award.title %></p>
   <p class="text-xs title-font font-medium text-gray-500">授賞者：<%= award.user.name %></p>
   <%= link_to "詳細", award, class: "btn btn-outline btn-sm mt-4" %>
-  <% if current_user.own?(award) %>
+  <% if current_user && current_user.own?(award) %>
     <%= link_to "削除", award_path(award), class: "btn btn-active btn-ghost btn-sm mt-4 ml-2", data: { turbo_method: :delete, turbo_confirm: "削除しますか？" } %>
   <% end %>
 </div>
