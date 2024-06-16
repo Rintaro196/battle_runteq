@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates_presence_of :name
   has_many :awards
+
+  def own?(object)
+    id == object&.user_id
+  end
 end

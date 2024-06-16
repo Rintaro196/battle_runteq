@@ -1,6 +1,6 @@
 class AwardsController < ApplicationController
-    before_action :authenticate_user!, only: %i[new create]
-    before_action :set_award, only: %i[show]
+    before_action :authenticate_user!, only: %i[new create destroy]
+    before_action :set_award, only: %i[show destroy]
     def index
         @awards = Award.includes(:user)
     end
@@ -20,6 +20,12 @@ class AwardsController < ApplicationController
         else
             render :new
         end
+    end
+
+    def destroy
+        @award = current_user.awards.find(params[:id])
+        @award.destroy!
+        redirect_to awards_path, status: :see_other
     end
 
     private
