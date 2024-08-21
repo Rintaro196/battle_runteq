@@ -4,7 +4,7 @@
 <body>
     <section>
         <div class="mx-auto flex w-1/2 min-w-80 flex-col justify-center bg-white rounded-2xl shadow-xl shadow-gray-400/20 my-24 border-2" >
-          <%= image_tag 'sample.png', class: "aspect-video min-w-80 rounded-t-2xl object-cover object-center" %>
+          <%= image_tag @award.image.url, class: "aspect-video min-w-80 rounded-t-2xl object-cover object-center" %>
           <div class="p-6 text-center">
             <small class="text-gray-900">＜受賞名＞</small>
             <h1 class="text-4xl font-medium text-yellow-400 pb-2"><%= @award.award_name %></h1>

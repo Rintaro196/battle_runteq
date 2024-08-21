@@ -70,3 +70,6 @@ group :test do
 end
 
 gem "devise"
+
+# 画像アップロード用
+gem "carrierwave"
