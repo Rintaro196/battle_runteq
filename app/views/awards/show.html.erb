@@ -15,6 +15,7 @@
             <div class="card-actions justify-end mt-3">
             <%= link_to "一覧に戻る", awards_path, class: "btn btn-active btn-neutral" %>
             <% if current_user && current_user.own?(@award) %>
+              <%= link_to "ツイート", "https://twitter.com/intent/tweet?text=#{ERB::Util.url_encode("受賞名: #{@award.award_name}\nゲームタイトル: #{@award.title}\n授賞者: #{@award.user.name}\n#{request.url}")}", target: "_blank", class: "btn btn-active btn-info" %>
               <%= link_to "削除", award_path(@award), class: "btn btn-active btn-ghost", data: { turbo_method: :delete, turbo_confirm: "削除しますか？" } %>
             <% end %>
             </div>
