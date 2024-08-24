@@ -35,6 +35,6 @@ class AwardsController < ApplicationController
     end
 
     def award_params
-        params.require(:award).permit(:award_name, :title, :body)
+        params.require(:award).permit(:award_name, :title, :body, :image, :image_cache)
     end
 end
